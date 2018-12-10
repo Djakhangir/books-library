@@ -16,12 +16,16 @@ const routes: Routes = [
     component: RegisterComponent,
   },
   {
-    path:'BookListItemsComponent',
-    component: BookListItemsComponent
+    path:'library',
+    component: BookListItemsComponent,
+  },
+  {
+    path:'library/:id',
+    component: BookListItemsComponent,        
   },
   {
     path:'**',
-    redirectTo:'LogInComponent',
+    redirectTo:'',
   }
 ];
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookListService } from '../book-list.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { EditServiceService } from '../edit-service.service';
 
 @Component({
   selector: 'app-book-list-items',
@@ -8,6 +10,8 @@ import { BookListService } from '../book-list.service';
 })
 export class BookListItemsComponent implements OnInit {
   title: string;
+  //routingEdit: Array<string|number>;
+  
 
   public listOfUsers = [
      {
@@ -44,7 +48,7 @@ export class BookListItemsComponent implements OnInit {
 }
 
 public selectedRow: Number;
-public setClickedRow: Function;
+
  
  public bookList = [
    {
@@ -83,13 +87,33 @@ public setClickedRow: Function;
   //   book.flag = !book.flag;
  // }
   
-  constructor() {
+  constructor(
+  private router:Router,
+  private activatedRoute: ActivatedRoute,
+  private editService:EditServiceService,
+   
+  ) {
     
-    this.setClickedRow = function(index){
-      this.selectedRow = index;
-   }
   }
+
   ngOnInit(){
     
   }
+
+
+setClickedRow (index) { 
+  this.selectedRow = index;
+  //this.routerService.navigateByUrl('/')
 }
+
+public libraryNavigation ( id) {
+    this.router.navigateByUrl(id).then(e => {
+      if (e) {
+        console.log("Navigation is successful!");
+      } else {
+        console.log("Navigation has failed!");
+      }
+    });
+  }
+}
+

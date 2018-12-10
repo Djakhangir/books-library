@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
   }); 
   }
 
-  onSubmit() { // submit info
+  onSubmit() { // submit info for registration form
     this.submitted = true;
 
     // stop here if form is invalid
@@ -35,6 +35,17 @@ export class RegisterComponent implements OnInit {
     }
 
     this.loading = true;
+    // this.userService.register(this.registerForm.value)
+    //         .pipe(first())
+    //         .subscribe(
+    //             data => {
+    //                 this.alertService.success('Registration successful', true);
+    //                 this.router.navigate(['/login']);
+    //             },
+    //             error => {
+    //                 this.alertService.error(error);
+    //                 this.loading = false;
+    //             });
   }
 
 }

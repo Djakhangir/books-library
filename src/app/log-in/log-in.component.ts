@@ -9,14 +9,16 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 })
 export class LogInComponent implements OnInit {
   loginForm: FormGroup;
-  loading: false;
-  submitted: false;
+  loading: boolean;
+  submitted: boolean;
   returnUrl: string;
+  value: any;
 
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
     private route: ActivatedRoute,
+   // public _router = router
   
   ) { }
 
@@ -27,19 +29,18 @@ export class LogInComponent implements OnInit {
       password:['', Validators.required]
     });
   }
-
-    //  onSubmit() {
-    //   this.submitted = true;
-
-    //   if (this.loginForm.invalid) {
-    //     return;
+//by pressing the button redirects you to the library
+    onSubmit() {
+      this.submitted = true;
+      
+          if (this.loginForm.invalid) {
+            return;
+          }
+      this.loading = true;
+      this.loading = false;
+      //this._router.navigate(['/library']);
     
-    //   }
-
-    // this.loading = true;
-    // this.loading = false;
-    
-    // }
+     }
   }
   
   

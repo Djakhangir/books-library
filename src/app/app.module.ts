@@ -23,7 +23,8 @@ import { BookListItemsComponent } from './book-list-items/book-list-items.compon
   imports: [
     FormsModule,
     AppRoutingModule,
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

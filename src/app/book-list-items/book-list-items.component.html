@@ -3,8 +3,8 @@
 
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    <p><a [routerLink]="['/login']">Logout</a></p>
+    <button class="btn btn-outline-success my-2" type="submit">Search</button>
+    <button class=" btn btn-outline-grey my-2" [routerLink]="['/login']">Logout</button>
   </form>
 </nav>
 
@@ -45,8 +45,10 @@
       <button type="button" class="btn btn-grey btn-md">Add</button>
     </div>
     <div class="col-md-4 editButton">
-      <button type="button" class="btn btn-success btn-md" [routerLink]="routingEdit"
-      routerLinkActive="active">Edit</button>
+      <button type="button" class="btn btn-success btn-md" 
+     [routerLink]="editPage"
+     routerLinkActive="active"
+      >Edit</button>
     </div>
     <div class="col-md-4 deleteButton">
       <button type="button" class="btn btn-dark btn-md">Delete</button>
