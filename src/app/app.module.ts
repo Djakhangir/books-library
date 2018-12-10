@@ -10,6 +10,8 @@ import { EditServiceService } from './edit-service.service';
 import { LogInComponent } from './log-in/log-in.component';
 import { RegisterComponent } from './register/register.component';
 import { BookListItemsComponent } from './book-list-items/book-list-items.component';
+import { UsersComponent } from './users/users.component';
+import { UserListService } from './user-list.service';
 
 
 
@@ -18,15 +20,16 @@ import { BookListItemsComponent } from './book-list-items/book-list-items.compon
     AppComponent,
     BookListItemsComponent,
     LogInComponent,
-    RegisterComponent
+    RegisterComponent,
+    UsersComponent
   ],
   imports: [
     FormsModule,
-    AppRoutingModule,
+    ReactiveFormsModule,
     BrowserModule,
-    ReactiveFormsModule
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [BookListService, UserListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

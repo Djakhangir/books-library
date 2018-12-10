@@ -1,0 +1,54 @@
+
+
+<div class="table-responsive">
+
+  <div class="container-fluid">
+    <form class="form-inline">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-dark" type="submit">Search</button>
+    </form>
+  </div>
+
+    <div class="container users">
+      <div class="row">
+        <div class="col-6 offset-3">
+        <h3>List of Users</h3>
+        </div>
+      </div>
+    </div> 
+
+   <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">Total Amount</th>
+      <th scope="col">Dates</th>
+      <th scope="col">Category</th>
+
+        </tr>
+      </thead>
+    <tbody>
+      <tr *ngFor="let list of listOfUsers"  (click)="selectlistOfUsers($event, list);" [class.selected]="list.flag === true">
+          <td>{{list.id}}</td>
+          <td>{{list.name}}</td>
+          <td>{{list.author}}</td>
+          <td>{{list.totalAmount}}</td>
+          <td>{{list.dates}}</td>
+          <td>{{list.category}}</td>
+      </tr>
+    </tbody>
+   </table>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 issueButton">
+      <button type="button" class="btn btn-blue btn-md">Issue</button>
+    </div>
+    <div class="col-md-7 returnButton">
+      <button type="button" class="btn btn-grey btn-md">Return</button>
+    </div>
+    </div>
+</div>
