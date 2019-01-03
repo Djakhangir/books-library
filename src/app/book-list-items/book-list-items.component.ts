@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { BookListService } from '../book-list.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { EditServiceService } from '../edit-service.service';
+import { ParentComponent } from "../parent/parent.component";
 
 @Component({
   selector: 'app-book-list-items',
@@ -9,11 +10,13 @@ import { EditServiceService } from '../edit-service.service';
   styleUrls: ['./book-list-items.component.scss']
 })
 export class BookListItemsComponent implements OnInit {
-  title: string;
-  //routingEdit: Array<string|number>;
+ 
   public selectedRow: Number;
   public bookList = []; 
-  
+ // private newBookListCode: any = {}
+
+ //@Input() parentComponent:ParentComponent;
+
 constructor(
   private router:Router,
   private activatedRoute: ActivatedRoute,
@@ -24,17 +27,17 @@ getListOfBooks(): any{
   this.bookList = this.bookListService.getListOfBooks();
 }
 
-  ngOnInit( ){
+ngOnInit( ){
     this.bookList = this.bookListService.getListOfBooks();
   }
 
-public selectbookList(event: any, book: any) {
+selectbookList(event: any, book: any) {
   book.flag = !book.flag;
 }
 
 setClickedRow (index) { 
   this.selectedRow = index;
-  this.router.navigate(['library', index]);
+  this.router.navigate(['/library', index]);
 }
 
 libraryNavigation (id) {
@@ -46,5 +49,15 @@ libraryNavigation (id) {
       }
     });
   }
+
+// addRow(){
+//   this.bookList.push(this.newBookListCode)
+//   this.newBookListCode= {}
+// }
+
+// deleteRow(index){
+//   this.bookList.splice(index,1)
+// }
+
 }
 

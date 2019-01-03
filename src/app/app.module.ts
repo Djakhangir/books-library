@@ -12,6 +12,8 @@ import { RegisterComponent } from './register/register.component';
 import { BookListItemsComponent } from './book-list-items/book-list-items.component';
 import { UsersComponent } from './users/users.component';
 import { UserListService } from './user-list.service';
+import { ParentComponent } from './parent/parent.component';
+import { ParentRoutingModule } from './parent-routing.module';
 
 
 
@@ -21,13 +23,15 @@ import { UserListService } from './user-list.service';
     BookListItemsComponent,
     LogInComponent,
     RegisterComponent,
-    UsersComponent
+    UsersComponent,
+    ParentComponent
   ],
   imports: [
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ParentRoutingModule
   ],
   providers: [BookListService, UserListService],
   bootstrap: [AppComponent]

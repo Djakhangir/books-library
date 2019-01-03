@@ -10,8 +10,5 @@ import { BookListService } from './book-list.service'
 export class AppComponent {
   title = 'books-library';
 
-  constructor (//private bookListService: BookListService
-    ){
-      //this.title = this.bookListService.bookMethod();
-  }
+  constructor (){ }
 }

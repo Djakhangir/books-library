@@ -18,8 +18,7 @@ export class LogInComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router,
     private route: ActivatedRoute,
-   // public _router = router
-  
+    
   ) { }
 
   ngOnInit() {
@@ -34,7 +33,7 @@ export class LogInComponent implements OnInit {
       this.submitted = true;
       
           if (this.loginForm.invalid) {
-            return;
+            return "Username or Password are invalid";
           }
       this.loading = true;
       this.loading = false;

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BookListItemsComponent } from './book-list-items/book-list-items.component'
 
 @Injectable()
+
 export class BookListService {
 
   public bookList = [
