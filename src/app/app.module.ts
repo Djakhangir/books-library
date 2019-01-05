@@ -5,13 +5,13 @@ import { ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BookListService } from './book-list.service';
-import { EditServiceService } from './edit-service.service';
+import { BookListService } from './Services/book-list.service';
+import { EditServiceService } from './Services/edit-service.service';
 import { LogInComponent } from './log-in/log-in.component';
 import { RegisterComponent } from './register/register.component';
 import { BookListItemsComponent } from './book-list-items/book-list-items.component';
 import { UsersComponent } from './users/users.component';
-import { UserListService } from './user-list.service';
+import { UserListService } from './Services/user-list.service';
 import { ParentComponent } from './parent/parent.component';
 import { ParentRoutingModule } from './parent-routing.module';
 

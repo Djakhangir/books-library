@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { BookListService } from '../book-list.service';
+import { BookListService } from '../Services/book-list.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { EditServiceService } from '../edit-service.service';
+import { EditServiceService } from '../Services/edit-service.service';
 import { ParentComponent } from "../parent/parent.component";
 
 @Component({
@@ -13,11 +13,8 @@ export class BookListItemsComponent implements OnInit {
  
   public selectedRow: Number;
   public bookList = []; 
- // private newBookListCode: any = {}
-
- //@Input() parentComponent:ParentComponent;
-
-constructor(
+ 
+  constructor(
   private router:Router,
   private activatedRoute: ActivatedRoute,
   private bookListService:BookListService,
@@ -31,24 +28,20 @@ ngOnInit( ){
     this.bookList = this.bookListService.getListOfBooks();
   }
 
-selectbookList(event: any, book: any) {
-  book.flag = !book.flag;
-}
-
 setClickedRow (index) { 
   this.selectedRow = index;
   this.router.navigate(['library', index], {relativeTo: this.activatedRoute});
 }
 
-libraryNavigation (id) {
-    this.router.navigateByUrl(id).then(e => {
-      if (e) {
-        console.log("Navigation is successful!");
-      } else {
-        console.log("Navigation has failed!");
-      }
-    });
-  }
+// libraryNavigation (id) {
+//     this.router.navigateByUrl(id).then(e => {
+//       if (e) {
+//         console.log("Navigation is successful!");
+//       } else {
+//         console.log("Navigation has failed!");
+//       }
+//     });
+//   }
 
 // addRow(){
 //   this.bookList.push(this.newBookListCode)

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BookListItemsComponent } from './book-list-items/book-list-items.component'
+import { BookListItemsComponent } from '../book-list-items/book-list-items.component'
 
 @Injectable()
 

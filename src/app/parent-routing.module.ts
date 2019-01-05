@@ -4,6 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { BookListItemsComponent } from "./book-list-items/book-list-items.component";
 //import { UsersComponent } from "./users/users.component";
 import { ParentComponent } from "./parent/parent.component";
+import { UsersComponent } from './users/users.component';
 
 const parentRoutes: Routes = [
   {
@@ -13,13 +14,17 @@ const parentRoutes: Routes = [
           {
             path:'library/:id',
             component: BookListItemsComponent,      
+          },
+          {
+            path:'User/:id',
+            component: UsersComponent,
           },      
     ],
   },
- // {
-  //  path:'**',
-  //  redirectTo:'',
- // },
+//  {
+//    path:'**',
+//    redirectTo:'',
+//  },
 ];
 
 @NgModule({
