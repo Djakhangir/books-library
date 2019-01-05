@@ -37,7 +37,7 @@ selectbookList(event: any, book: any) {
 
 setClickedRow (index) { 
   this.selectedRow = index;
-  this.router.navigate(['/library', index]);
+  this.router.navigate(['library', index], {relativeTo: this.activatedRoute});
 }
 
 libraryNavigation (id) {

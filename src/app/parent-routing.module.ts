@@ -16,10 +16,10 @@ const parentRoutes: Routes = [
           },      
     ],
   },
-  {
-    path:'**',
-    redirectTo:'',
-  },
+ // {
+  //  path:'**',
+  //  redirectTo:'',
+ // },
 ];
 
 @NgModule({

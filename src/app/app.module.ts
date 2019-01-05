@@ -30,8 +30,8 @@ import { ParentRoutingModule } from './parent-routing.module';
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule,
-    ParentRoutingModule
+    ParentRoutingModule,
+    AppRoutingModule
   ],
   providers: [BookListService, UserListService],
   bootstrap: [AppComponent]
