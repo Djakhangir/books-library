@@ -3,8 +3,8 @@
 
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2" type="submit">Search</button>
-    <button class=" btn btn-outline-grey my-2" [routerLink]="['/login']">Logout</button>
+    <button (click)="submitFilter()" class="btn btn-outline-success my-2" type="submit">Search</button>
+    <button class=" btn btn-outline-grey my-2" [routerLink]="['/']">Logout</button>
   </form>
 </nav>
 
@@ -78,8 +78,6 @@
   <br>
   <hr class="one">
 <br> 
-
-<app-users> </app-users>
 
 <div class="footer">
 

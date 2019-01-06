@@ -8,17 +8,18 @@ import { UsersComponent } from './users/users.component';
 
 const parentRoutes: Routes = [
   {
-    path:'parent',
-    component: ParentComponent,
+    path:'library',
+    component: ParentComponent, 
+    pathMatch: 'full'
   },
   {
     path:'library/:id',
-    component: BookListItemsComponent, 
-  },
-  {
-    path:'user/:id',
-    component: UsersComponent,
-  }     
+    component: ParentComponent, 
+  }, 
+  { 
+    path: 'user/:id',
+    component:ParentComponent
+  }   
 ];
 
 @NgModule({

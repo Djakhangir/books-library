@@ -6,6 +6,7 @@ import { LogInComponent } from './log-in/log-in.component';
 import { RegisterComponent } from './register/register.component';
 import { ParentComponent } from "../app/parent/parent.component";
 
+
 const routes: Routes = [
   {
     path:'',
@@ -13,7 +14,7 @@ const routes: Routes = [
     pathMatch:'full'
   },  
   {
-    path: 'parent',
+    path: 'library',
     component:ParentComponent,
   }, 
   {

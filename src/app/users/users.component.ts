@@ -28,7 +28,7 @@ ngOnInit() {
 
   selectedUserList (index) {
     this.selectedUser = index;
-    this.router.navigate(['User', index]);
+    this.router.navigate(['user', index]);
 }
 
 // userNavigation (index) {
