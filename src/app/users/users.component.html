@@ -30,7 +30,7 @@
         </tr>
       </thead>
     <tbody>
-      <tr *ngFor="let list of listOfUsers"  (click)="selectedUserList(list.id);" [class.active]="list.id == selectedUser">
+      <tr *ngFor="let list of listOfUsers"  (click)="selectedUserList(list.id)" [class.active]="list.id == selectedUser">
           <td>{{list.id}}</td>
           <td>{{list.name}}</td>
           <td>{{list.author}}</td>

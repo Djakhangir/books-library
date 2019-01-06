@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 //import { CommonModule } from '@angular/common';
 import { BookListItemsComponent } from "./book-list-items/book-list-items.component";
@@ -10,21 +10,15 @@ const parentRoutes: Routes = [
   {
     path:'parent',
     component: ParentComponent,
-    children: [
-          {
-            path:'library/:id',
-            component: BookListItemsComponent,      
-          },
-          {
-            path:'User/:id',
-            component: UsersComponent,
-          },      
-    ],
   },
-//  {
-//    path:'**',
-//    redirectTo:'',
-//  },
+  {
+    path:'library/:id',
+    component: BookListItemsComponent, 
+  },
+  {
+    path:'user/:id',
+    component: UsersComponent,
+  }     
 ];
 
 @NgModule({

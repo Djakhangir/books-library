@@ -28,17 +28,17 @@ ngOnInit() {
 
   selectedUserList (index) {
     this.selectedUser = index;
-    this.router.navigate(['User', index], {relativeTo: this.activatedRoute});
+    this.router.navigate(['User', index]);
 }
 
-userNavigation (index) {
-  this.router.navigateByUrl(index).then(e => {
-    if(e) {
-      console.log("Navigation is successful!");
-    } else {
-      console.log("Navigation has failed!");
-    }
-  });
-}
+// userNavigation (index) {
+//   this.router.navigateByUrl(index).then(e => {
+//     if(e) {
+//       console.log("Navigation is successful!");
+//     } else {
+//       console.log("Navigation has failed!");
+//     }
+//   });
+// }
 
 }

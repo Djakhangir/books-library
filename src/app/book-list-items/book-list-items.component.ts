@@ -30,7 +30,8 @@ ngOnInit( ){
 
 setClickedRow (index) { 
   this.selectedRow = index;
-  this.router.navigate(['library', index], {relativeTo: this.activatedRoute});
+  this.router.navigate(['library', index]// {relativeTo: this.activatedRoute}
+  );
 }
 
 // libraryNavigation (id) {
