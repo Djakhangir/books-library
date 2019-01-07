@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { BookListService } from '../Services/book-list.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { EditServiceService } from '../Services/edit-service.service';
-import { ParentComponent } from "../parent/parent.component";
+import { Router, ActivatedRoute } from '@angular/router'; 
 
 @Component({
   selector: 'app-book-list-items',
@@ -28,8 +26,11 @@ ngOnInit( ){
     this.bookList = this.bookListService.getListOfBooks();
   }
 
+// submitFilter(): any{
+//   this.searchBook = this.searchBook;
+// }
+
 setClickedRow (index) { 
-  this.selectedRow = index;
   this.router.navigate(['library', index]// {relativeTo: this.activatedRoute}
   );
 }

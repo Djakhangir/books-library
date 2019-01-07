@@ -14,6 +14,8 @@ import { UsersComponent } from './users/users.component';
 import { UserListService } from './Services/user-list.service';
 import { ParentComponent } from './parent/parent.component';
 import { ParentRoutingModule } from './parent-routing.module';
+import { UseraccountsComponent } from './useraccounts/useraccounts.component';
+import { FilterPipe } from './filter.pipe';
 
 
 
@@ -24,7 +26,9 @@ import { ParentRoutingModule } from './parent-routing.module';
     LogInComponent,
     RegisterComponent,
     UsersComponent,
-    ParentComponent
+    ParentComponent,
+    UseraccountsComponent,
+    FilterPipe
   ],
   imports: [
     FormsModule,

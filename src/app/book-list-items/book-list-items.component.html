@@ -22,35 +22,14 @@
   </thead>
   <tbody>
         
-  <tr *ngFor="let book of bookList, let i = index"  (click)="setClickedRow(book.id)" [class.active]="book.id == selectedRow">
+  <tr *ngFor="let book of bookList | filter: searchBook, let i = index"  (click)="setClickedRow(book.id)" [class.active]="book.id == selectedRow">
       <th scope="row">{{book.id}}</th>
       <td>{{book.bookName}}</td>
       <td>{{book.authorName}}</td>
       <td>{{book.isbnCode}}</td>
       <td>{{book.availableBooks}}</td>
       <td>{{book.publishingDate}}</td>
-      <td>{{book.category}}</td>
-      
-    
-        <!-- <td>
-          <input class="form-control" type="text" id="newbookListid" [(ngModel)]="newbookList.id" name="newbookListid" />
-        </td>
-        <td>
-          <input class="form-control" type="text" id="newbookListname" [(ngModel)]="newbookList.name" name="newbookListauthorename" />
-        </td>
-        <td>
-          <input class="form-control" type="text" id="newbookListisbn" [(ngModel)]="newbookList.isbn" name="newbookListisbn" />
-        </td>
-        <td>
-          <input class="form-control" type="text" id="newbookListavailables" [(ngModel)]="newbookList.availables" name="newbookListavailables" />
-        </td>
-        <td>
-            <input class="form-control" type="text" id="newbookListpublishing" [(ngModel)]="newbookList.publishing" name="newbookListpublishing" />
-        </td>
-        <td>
-            <input class="form-control" type="text" id="newbookListcategory" [(ngModel)]="newbookList.category" name="newbookListcategory" />
-        </td> -->
-    
+      <td>{{book.category}}</td>    
   </tr>
 
     <div class="well well-lg">
