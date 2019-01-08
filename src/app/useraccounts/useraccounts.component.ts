@@ -10,24 +10,22 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./useraccounts.component.scss']
 })
 export class UseraccountsComponent implements OnInit {
-  
+  //reference to bookList array of objects
   public bookList = [];
-  private selectedRow : any
+  //selected Book with any type of value
+  selectedBook;
 
-  constructor(
+  constructor( // variable and properties link to components and services used in methods
     private router:Router,
     private activatedRoute: ActivatedRoute,
-    private bookListComponent : BookListItemsComponent,
     private bookListService : BookListService,
   ) { }
   
+  //on Inititalization use those methods:
   ngOnInit() {
-   
-  this.bookListService.getSingleBook(this.selectedRow); 
-  
-    this.selectedRow = this.activatedRoute.params.subscribe((params) => {
-      this.bookList=params.id; 
-      //console.log(params) 
+  //to show the parameter caught by url in input tag of HTML, in this case it is ID
+    this.activatedRoute.params.subscribe((params) => {
+      this.selectedBook=this.bookListService.getSingleBook(params.id);
     });
 
   

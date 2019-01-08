@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { BookListItemsComponent } from '../book-list-items/book-list-items.component'
-import { ActivatedRoute } from '@angular/router';
 
 @Injectable()
 
 export class BookListService {
+
+  //Mock data
 
   public bookList = [
     {
@@ -50,13 +50,13 @@ getListOfBooks()
 getSingleBook(bookId : number) { 
 
   //code below is the same as: 
-  
+
   // abook= null;
     // for (let index = 0; index, index<this.bookList.length; index++) {
     // if (this.bookList[index].id === bookId) { 
       // aBook = this.bookList [index] }};
 
-  const aBook = this.bookList.filter(bookList => bookList.id === bookId);
+  const aBook = this.bookList.filter(eachBook => eachBook.id === bookId)[0];
   return aBook;
 };
 
