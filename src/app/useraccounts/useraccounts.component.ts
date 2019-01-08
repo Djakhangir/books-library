@@ -23,13 +23,15 @@ export class UseraccountsComponent implements OnInit {
   
   ngOnInit() {
    
-    this.bookList = this.bookListService.getListOfBooks(); 
-this.selectedRow = this.bookListService.getSingleBook()
-  }
+  this.bookListService.getSingleBook(this.selectedRow); 
+  
+    this.selectedRow = this.activatedRoute.params.subscribe((params) => {
+      this.bookList=params.id; 
+      //console.log(params) 
+    });
 
-//setClickedRow (index) { 
-//    this.router.navigate(['useraccounts', index]// {relativeTo: this.activatedRoute}
- //   );
-//  }
+  
+  
+  }
 
 }

@@ -41,15 +41,23 @@ export class BookListService {
 
   constructor( ) { }
 
-     // to get the list of books for bookListItemComponent table
+     // to get the list of books for bookListItemComponent table...
 getListOfBooks()
 {
   return this.bookList
 }
-    //to get the single book after selection...
-getSingleBook() {
-  let id = this.bookList.get('id'); 
-  return document.getElementById(this.bookList['id'].id)
+    //to get the single book by unique value...
+getSingleBook(bookId : number) { 
+
+  //code below is the same as: 
+  
+  // abook= null;
+    // for (let index = 0; index, index<this.bookList.length; index++) {
+    // if (this.bookList[index].id === bookId) { 
+      // aBook = this.bookList [index] }};
+
+  const aBook = this.bookList.filter(bookList => bookList.id === bookId);
+  return aBook;
 };
 
 }
