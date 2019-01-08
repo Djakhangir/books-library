@@ -5,19 +5,24 @@
     <div class="container">
       <td>
     <label for="exampleInputBook">Book Name</label>
-    <input class="form-control" type="text" id="newbookListname" [(ngModel)]="newbookList.name" placeholder="Book Name">
+    <input
+    class="form-control" 
+    type="text" 
+    id="newbookListname" 
+    placeholder="Book Name" 
+    [class.active]="bookList == selectedRow" > {{bookList.bookName}}
   </td>
 <td>
     <label for="exampleInputAuthor">Author Name</label>
-    <input class="form-control" type="text" id="newbookListisbn" [(ngModel)]="newbookList.isbn" placeholder="Author Name">
+    <input class="form-control" type="text" id="newbookListisbn" placeholder="Author Name"> {{bookList.bookName}}
   </td>
   <td> 
     <label for="exampleInputISBN">ISBN Code</label>
-    <input class="form-control" type="text" id="newbookListavailables" [(ngModel)]="newbookList.availables" placeholder="ISBN Code">
+    <input class="form-control" type="text" id="newbookListavailables" placeholder="ISBN Code"> {{bookList.bookName}}
   </td>
 <td>
       <label for="exampleInputAvailablity">Available Books</label>
-      <input class="form-control" type="text" id="newbookListpublishing" [(ngModel)]="newbookList.publishing" placeholder="Availability">
+      <input class="form-control" type="text" id="newbookListpublishing" placeholder="Availability"> {{bookList.bookName}}
     </td>
     </div>
   </div>
@@ -28,19 +33,19 @@
       <div class="container-fluid">
         <td>
       <label for="exampleInputDate">Publishing date</label>
-      <input class="form-control" type="text" id="newbookListcategory" [(ngModel)]="newbookList.category" placeholder="Publishing Date">
+      <input class="form-control" type="text" id="newbookListcategory" placeholder="Publishing Date">
     </td>
   <td>
       <label for="exampleInputCategory">Category</label>
-      <input class="form-control" type="text" id="newbookListcategory" [(ngModel)]="newbookList.category" placeholder="Category">
+      <input class="form-control" type="text" id="newbookListcategory" placeholder="Category">
     </td>
     <td> 
       <label for="exampleInputId">ID</label>
-      <input class="form-control" type="text" id="newbookListcategory" [(ngModel)]="newbookList.category" placeholder="ID">
+      <input class="form-control" type="text" id="newbookListcategory" placeholder="ID">
     </td>
   <td>
         <label for="exampleInputUser">User Name</label>
-        <input class="form-control" type="text" id="UserID" [(ngModel)]="newUser.User" placeholder="User">
+        <input class="form-control" type="text" id="UserID" placeholder="User">
       </td>
       </div>
     </div>

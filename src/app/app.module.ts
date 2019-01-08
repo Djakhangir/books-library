@@ -16,17 +16,18 @@ import { ParentComponent } from './parent/parent.component';
 import { ParentRoutingModule } from './parent-routing.module';
 import { UseraccountsComponent } from './useraccounts/useraccounts.component';
 import { FilterPipe } from './filter.pipe';
+import { Observable } from "rxjs";
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    ParentComponent,
     BookListItemsComponent,
     LogInComponent,
     RegisterComponent,
     UsersComponent,
-    ParentComponent,
     UseraccountsComponent,
     FilterPipe
   ],
@@ -37,7 +38,7 @@ import { FilterPipe } from './filter.pipe';
     ParentRoutingModule,
     AppRoutingModule
   ],
-  providers: [BookListService, UserListService],
+  providers: [BookListService, UserListService, BookListItemsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

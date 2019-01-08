@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { BookListService } from '../Services/book-list.service';
 import { Router, ActivatedRoute } from '@angular/router'; 
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-book-list-items',
@@ -8,7 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./book-list-items.component.scss']
 })
 export class BookListItemsComponent implements OnInit {
- 
+  private subscription: Subscription;
   public selectedRow: Number;
   public bookList = []; 
  
@@ -24,7 +25,11 @@ getListOfBooks(): any{
 
 ngOnInit( ){
     this.bookList = this.bookListService.getListOfBooks();
-  }
+
+    this.subscription = this.activatedRoute.params.subscribe((param) => {
+      this.selectedRow=param.id;
+  });
+};
 
 // submitFilter(): any{
 //   this.searchBook = this.searchBook;
