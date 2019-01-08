@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BookListItemsComponent } from '../book-list-items/book-list-items.component'
+import { ActivatedRoute } from '@angular/router';
 
 @Injectable()
 
@@ -38,12 +39,17 @@ export class BookListService {
     }
  ]
 
-  constructor() { }
+  constructor( ) { }
 
-
+     // to get the list of books for bookListItemComponent table
 getListOfBooks()
 {
   return this.bookList
 }
+    //to get the single book after selection...
+getSingleBook() {
+  let id = this.bookList.get('id'); 
+  return document.getElementById(this.bookList['id'].id)
+};
 
 }

@@ -12,7 +12,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class UseraccountsComponent implements OnInit {
   
   public bookList = [];
-  private selectedRow=this.bookList.filter(bookList => bookList.id === this.bookListService.getListOfBooks);
+  private selectedRow : any
 
   constructor(
     private router:Router,
@@ -22,14 +22,9 @@ export class UseraccountsComponent implements OnInit {
   ) { }
   
   ngOnInit() {
-   this.selectedRow = this.bookList.filter(
-     bookList => bookList.id);
-
-     this.bookList = this.selectedRow;
-  }
-
-  getSelectedBook(event: any) {
-  console.log(this.bookList)
+   
+    this.bookList = this.bookListService.getListOfBooks(); 
+this.selectedRow = this.bookListService.getSingleBook()
   }
 
 //setClickedRow (index) { 
