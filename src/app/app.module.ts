@@ -16,7 +16,6 @@ import { ParentComponent } from './parent/parent.component';
 import { ParentRoutingModule } from './parent-routing.module';
 import { UseraccountsComponent } from './useraccounts/useraccounts.component';
 import { FilterPipe } from './filter.pipe';
-import { Observable } from "rxjs";
 
 // app module is the main module and root of the aplication. here we combine everything to work with one another.  
 //Declaration sequence matters, that is why we passed parent routing before the components and imported it before the appRouting Module.
@@ -38,7 +37,7 @@ import { Observable } from "rxjs";
     ParentRoutingModule,
     AppRoutingModule
   ], //providers are the services and components which provide different data or methods to another services or components
-  providers: [BookListService, UserListService, BookListItemsComponent],
+  providers: [BookListService, UserListService],
   //bootstrap is saying that we use bootstrap in app component (which is the root of all component)
   bootstrap: [AppComponent]
 })

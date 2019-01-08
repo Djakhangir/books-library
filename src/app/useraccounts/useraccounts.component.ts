@@ -25,7 +25,8 @@ export class UseraccountsComponent implements OnInit {
   ngOnInit() {
   //to show the parameter caught by url in input tag of HTML, in this case it is ID
     this.activatedRoute.params.subscribe((params) => {
-      this.selectedBook=this.bookListService.getSingleBook(params.id);
+      //plus will convert string into number
+      this.selectedBook=this.bookListService.getSingleBook(+params.id);
     });
 
   

@@ -5,6 +5,7 @@ import { BookListService } from '../Services/book-list.service';
 import { Router, ActivatedRoute } from '@angular/router'; 
 import { Subscription } from 'rxjs';
 
+
 @Component({
   selector: 'app-book-list-items',
   templateUrl: './book-list-items.component.html',
@@ -13,13 +14,12 @@ import { Subscription } from 'rxjs';
 export class BookListItemsComponent implements OnInit {
 
   // custom variables to use and to refer to;
- 
+  private subscription : Subscription;
   public selectedRow: Number;
   public bookList = []; 
  
   constructor(
     // varibales to use in constructor meaning related to other components, methods, services etc.
-  private subscription: Subscription,
   private router:Router,
   private activatedRoute: ActivatedRoute,
   private bookListService:BookListService,

@@ -8,29 +8,31 @@
     <input
     class="form-control" 
     type="text" 
-    id="newbookListname" 
-    placeholder="Book Name">
-    
+    id="newbookListName" 
+    placeholder="Book Name"
+    value = {{book.bookName}} >
   </td>
 <td>
     <label for="exampleInputAuthor">Author Name</label>
     <input 
     class="form-control" 
     type="text" 
-    id="newbookListisbn" 
-    placeholder="Author Name">
+    id="newbookListAuthor" 
+    placeholder="Author Name"
+    value = "{{book.authorName}}" >
   </td>
   <td> 
     <label for="exampleInputISBN">ISBN Code</label>
     <input 
     class="form-control" 
     type="text" 
-    id="newbookListavailables" 
-    placeholder="ISBN Code">
+    id="newbookListISBN" 
+    placeholder="ISBN Code"
+    value = "{{book.isbnCode}}" >
   </td>
 <td>
       <label for="exampleInputAvailablity">Available Books</label>
-      <input class="form-control" type="text" id="newbookListpublishing" placeholder="Availability">
+      <input class="form-control" type="text" id="newbookListAvailables" placeholder="Availability" value="{{book.availableBooks}}">
     </td>
     </div>
   </div>
@@ -41,15 +43,15 @@
       <div class="container-fluid">
         <td>
       <label for="exampleInputDate">Publishing date</label>
-      <input class="form-control" type="text" id="newbookListcategory" placeholder="Publishing Date">
+      <input class="form-control" type="text" id="newbookListpublishing" placeholder="Publishing Date" value="{{book.publishingDate}}">
     </td>
   <td>
       <label for="exampleInputCategory">Category</label>
-      <input class="form-control" type="text" id="newbookListcategory" placeholder="Category">
+      <input class="form-control" type="text" id="newbookListcategory" placeholder="Category" value="{{book.category}}">
     </td>
     <td> 
       <label for="exampleInputId">ID</label>
-      <input class="form-control" type="text" id="newbookListcategory" placeholder="ID">
+      <input class="form-control" type="text" id="newbookListcategory" placeholder="ID" value="{{book.id}}">
     </td>
   <td>
         <label for="exampleInputUser">User Name</label>
