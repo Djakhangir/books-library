@@ -4,6 +4,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { BookListService } from '../Services/book-list.service';
 import { Router, ActivatedRoute } from '@angular/router'; 
 import { Subscription } from 'rxjs';
+import { UseraccountsComponent } from '../useraccounts/useraccounts.component';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class BookListItemsComponent implements OnInit {
   private subscription : Subscription;
   public selectedRow: Number;
   public bookList = []; 
- 
+   
   constructor(
     // varibales to use in constructor meaning related to other components, methods, services etc.
   private router:Router,
@@ -38,7 +39,6 @@ ngOnInit( ){ //on initialization call methods:
  //... where selected row equals to paramenter as an ID
     this.subscription = this.activatedRoute.params.subscribe((params) => {
       this.selectedRow=params.id;
-
   });
 };
 
@@ -53,6 +53,7 @@ setClickedRow (index) {
   );
 }
 
+
 //add data method through add button
 
 // addRow(){
@@ -65,6 +66,10 @@ setClickedRow (index) {
 // deleteRow(index){
 //   this.bookList.splice(index,1)
 // }
-
+ngOnDestroy(): void {
+  //Called once, before the instance is destroyed.
+  //Add 'implements OnDestroy' to the class.
+  this.subscription.unsubscribe();
+};
 }
 

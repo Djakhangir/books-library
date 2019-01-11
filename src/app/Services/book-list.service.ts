@@ -56,7 +56,8 @@ getSingleBook(bookId : number) {
     // if (this.bookList[index].id === bookId) { 
       // aBook = this.bookList [index] }};
 
-  const aBook = this.bookList.filter(eachBook => eachBook.id === bookId)[0];
+  const aBook = this.bookList.filter(eachBook => eachBook.id === bookId)[0]; 
+  // defined variable and filtered with new defining new variable eachBook and returned as a number of bookId
   return aBook;
 };
 

@@ -14,6 +14,7 @@ export class UseraccountsComponent implements OnInit {
   public bookList = [];
   //selected Book with any type of value
   selectedBook;
+  isDisabled:boolean=false; //defined variable with boolean value to disable the input tag
 
   constructor( // variable and properties link to components and services used in methods
     private router:Router,
@@ -25,12 +26,11 @@ export class UseraccountsComponent implements OnInit {
   ngOnInit() {
   //to show the parameter caught by url in input tag of HTML, in this case it is ID
     this.activatedRoute.params.subscribe((params) => {
-      //plus will convert string into number
-      this.selectedBook=this.bookListService.getSingleBook(+params.id);
+      //selectedBook method brings the method from the service to select a book and pass the values to input tag
+      this.selectedBook=this.bookListService.getSingleBook(+params.id); //plus will convert string into number
+      //disables the input tag after selection to avoid unregistered updates
+      this.isDisabled=this.selectedBook
     });
-
-  
-  
-  }
+}
 
 }

@@ -50,8 +50,9 @@
     <div class="col-md-4 addButton">
       <button type="button" class="btn btn-grey btn-md" (click)="addrow()">Add</button>
     </div>
-    <div class="col-md-4 editButton">
-      <button type="button" class="btn btn-success btn-md" [routerLink]="['useraccounts']">Edit</button>
+    <div class="col-md-4 editButton"> 
+   <!-- Used router link to navigate to that registered link upon click and routerLinkActive to manipulate with elements through css -->
+      <button type="button" class="btn btn-success btn-md" [routerLink]="['/library', selectedRow, 'edit']" routerLinkActive="active">Edit</button>
     </div>
     <div class="col-md-4 deleteButton">
       <button type="button" class="btn btn-dark btn-md"(click)="deleteRow(i)">Delete</button>
