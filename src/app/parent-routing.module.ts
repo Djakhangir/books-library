@@ -27,9 +27,7 @@ const parentRoutes: Routes = [
   path:'library/:id/:action',
   component:ParentComponent,
 },
-{
-  path:'**',
-  redirectTo:'library'},
+
   // { 
   //   path: 'user/:id',
   //   component:ParentComponent

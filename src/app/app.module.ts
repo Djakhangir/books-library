@@ -15,7 +15,6 @@ import { UserListService } from './Services/user-list.service';
 import { ParentComponent } from './parent/parent.component';
 import { ParentRoutingModule } from './parent-routing.module';
 import { UseraccountsComponent } from './useraccounts/useraccounts.component';
-import { FilterPipe } from './filter.pipe';
 
 // app module is the main module and root of the aplication. here we combine everything to work with one another.  
 //Declaration sequence matters, that is why we passed parent routing before the components and imported it before the appRouting Module.
@@ -28,7 +27,6 @@ import { FilterPipe } from './filter.pipe';
     RegisterComponent,
     UsersComponent,
     UseraccountsComponent,
-    FilterPipe
   ],
   imports: [
     FormsModule,

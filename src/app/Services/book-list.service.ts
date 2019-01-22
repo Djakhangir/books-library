@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 
@@ -38,19 +39,28 @@ export class BookListService {
    flag: false,
     }
  ]
+//assigned variables to be equal to bahaviorSubject and after subscription we have to return new observable 
+ private isEnabled = new BehaviorSubject(false);
+ currentIsEnabled = this.isEnabled.asObservable();
 
-  constructor( ) { }
+ constructor( ) { }
+
+ //this method accepts the new property/ shared property and after subscription to currentIsEnabled...
+ // is going to change the variable editBool which is passed to book-list-item.ts to receive and equalize editBools
+changeButton(editBool) { 
+   this.isEnabled.next(editBool);
+ }
 
      // to get the list of books for bookListItemComponent table...
 getListOfBooks()
 {
   return this.bookList
 }
+
     //to get the single book by unique value...
 getSingleBook(bookId : number) { 
 
   //code below is the same as: 
-
   // abook= null;
     // for (let index = 0; index, index<this.bookList.length; index++) {
     // if (this.bookList[index].id === bookId) { 
