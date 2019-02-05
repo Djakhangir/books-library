@@ -31,15 +31,17 @@ export class UseraccountsComponent implements OnInit {
   this.selectedBook=this.bookListService.getSingleBook(+params.id); //plus will convert string into number
       //disables the input tag after selection to avoid unregistered updates
   this.isDisabled=this.selectedBook
+  this.isDisabled = params.action!== 'Edit';
 });
 
       //subscribing to change the editBool variable after click button
-  this.bookListService.currentIsEnabled.subscribe(editBool=>{
-    this.editBool=editBool
-    this.isDisabled = this.editBool? false: true 
+
+  // this.bookListService.currentIsEnabled.subscribe(editBool=>{
+  //   this.editBool=editBool
+  //   this.isDisabled = this.editBool? false: true 
  
-    console.log(editBool, this.isDisabled)
-  });
+  //   console.log(editBool, this.isDisabled)
+  // });
       
       
     

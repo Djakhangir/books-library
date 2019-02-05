@@ -45,10 +45,10 @@ ngOnInit( ){ //on initialization call methods:
   });
 //we subscribe to editBool in list service and callback editBool from services to make editBool be equal to the editBool
 //inside this component
-  this.bookListService.currentIsEnabled.subscribe(editBool=>{
-    this.editBool=editBool;
+ // this.bookListService.currentIsEnabled.subscribe(editBool=>{
+  //   this.editBool=editBool;
     
-  });
+  // });
 
 }
 //method helps to emit event through the click method, where we take the method assigned in services (sibling communication)
@@ -56,7 +56,7 @@ ngOnInit( ){ //on initialization call methods:
 enabledButton(){
   this.default= this.default=='Edit'? 'Save' : 'Edit';
 
-  this.default=='Edit'? this.bookListService.changeButton(true): this.bookListService.changeButton(false);
+ // this.default=='Edit'? this.bookListService.changeButton(true): this.bookListService.changeButton(false);
   
 
 }
