@@ -8,6 +8,7 @@ import { Router, ActivatedRoute } from "@angular/router";
 })
 export class ParentComponent implements OnInit {
 
+
   constructor(
     private router:Router,
     private route: ActivatedRoute,

@@ -47,7 +47,6 @@ export class BookListService {
 
  //this method accepts the new property/ shared property and after subscription to currentIsEnabled...
  // is going to change the variable editBool which is passed to book-list-item.ts to receive and equalize editBools
-
  // changeButton(editBool) { 
 //    this.isEnabled.next(editBool);
 //  }
@@ -71,5 +70,9 @@ getSingleBook(bookId : number) {
   // defined variable and filtered with new defining new variable eachBook and returned as a number of bookId
   return aBook;
 };
+
+updateLibrary(index: number):boolean{
+  return true;
+}
 
 }

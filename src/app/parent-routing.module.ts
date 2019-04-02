@@ -4,7 +4,7 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 import { ParentComponent } from "./parent/parent.component";
-import { BookListItemsComponent } from './book-list-items/book-list-items.component';
+import { BookListItemsComponent } from './parent/book-list-items/book-list-items.component';
 
 
 // router outlet to listen which route go after which, sequence matters

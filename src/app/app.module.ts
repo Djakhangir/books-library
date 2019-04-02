@@ -9,12 +9,12 @@ import { BookListService } from './Services/book-list.service';
 import { EditServiceService } from './Services/edit-service.service';
 import { LogInComponent } from './log-in/log-in.component';
 import { RegisterComponent } from './register/register.component';
-import { BookListItemsComponent } from './book-list-items/book-list-items.component';
+import { BookListItemsComponent } from './parent/book-list-items/book-list-items.component';
 import { UsersComponent } from './users/users.component';
 import { UserListService } from './Services/user-list.service';
 import { ParentComponent } from './parent/parent.component';
 import { ParentRoutingModule } from './parent-routing.module';
-import { UseraccountsComponent } from './useraccounts/useraccounts.component';
+import { UseraccountsComponent } from './parent/useraccounts/useraccounts.component';
 
 // app module is the main module and root of the aplication. here we combine everything to work with one another.  
 //Declaration sequence matters, that is why we passed parent routing before the components and imported it before the appRouting Module.

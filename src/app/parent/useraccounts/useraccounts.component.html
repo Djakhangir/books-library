@@ -1,0 +1,107 @@
+
+<form>
+  <div class="row">
+  <div class="form-group">
+    <div class="container">
+      <td>
+    <label for="exampleInputBook">Book Name</label>
+    <input 
+    class="form-control" 
+    type="text" 
+    id="newbookListName" 
+    placeholder="Book Name"
+    [disabled]="isDisabled" 
+    value = {{selectedBook?.bookName}}>
+    <!-- Used property binding [disabled] to the defined variable in ts file to disable upon selection -->
+    <!--Used string interpolation to bring the names of selected books -->
+  </td>
+<td>
+    <label for="exampleInputAuthor">Author Name</label>
+    <input 
+    class="form-control" 
+    type="text" 
+    id="newbookListAuthor" 
+    placeholder="Author Name"
+    [disabled]="isDisabled"
+    value = "{{selectedBook?.authorName}}" >
+  </td>
+  <td> 
+    <label for="exampleInputISBN">ISBN Code</label>
+    <input 
+    class="form-control" 
+    type="text" 
+    id="newbookListISBN" 
+    placeholder="ISBN Code"
+    [disabled]="isDisabled"
+    value = "{{selectedBook?.isbnCode}}" >
+  </td>
+<td>
+      <label for="exampleInputAvailablity">Available Books</label>
+      <input 
+      class="form-control"
+      type="text"
+      id="newbookListAvailables"
+      placeholder="Availability"
+      [disabled]="isDisabled"
+      value="{{selectedBook?.availableBooks}}">
+    </td>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+    <div class="form-group">
+      <div class="container-fluid">
+        <td>
+      <label for="exampleInputDate">Publishing date</label>
+      <input
+       class="form-control"
+       type="text" 
+       id="newbookListpublishing" 
+       placeholder="Publishing Date"
+       [disabled]="isDisabled"
+       value="{{selectedBook?.publishingDate}}">
+    </td>
+  <td>
+      <label for="exampleInputCategory">Category</label>
+      <input 
+        class="form-control" 
+        type="text" 
+        id="newbookListcategory" 
+        placeholder="Category" 
+        [disabled]="isDisabled" 
+        value="{{selectedBook?.category}}">
+    </td>
+    <td> 
+      <label for="exampleInputId">ID</label>
+      <input
+       class="form-control" 
+       type="text" 
+       id="newbookListcategory" 
+       placeholder="ID"
+       [disabled]="isDisabled"
+       value="{{selectedBook?.id}}">
+    </td>
+  <td>
+        <label for="exampleInputUser">User Name</label>
+        <input 
+        class="form-control" 
+        type="text" 
+        id="UserID" 
+        placeholder="User"
+        [disabled]="isDisabled"
+       >
+      </td>
+      </div>
+    </div>
+  </div> 
+<div class="form-check">
+    <input 
+    type="checkbox" 
+    class="form-check-input" 
+    id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check After Edit</label>
+</div>
+  
+</form>
+
